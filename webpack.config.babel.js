@@ -16,7 +16,8 @@ const umdConfig = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/env']
+            presets: ['@babel/env'],
+            plugins: ['@babel/transform-async-to-generator']
           }
         }
       }
