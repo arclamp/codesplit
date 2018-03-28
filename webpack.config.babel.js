@@ -1,6 +1,6 @@
 import path from 'path';
 
-const umdConfig = {
+export default {
   entry: './src/index.js',
   output: {
     path: path.resolve('dist'),
@@ -29,13 +29,3 @@ const umdConfig = {
     ]
   }
 };
-
-const webConfig = {
-  entry: './src/main.js',
-  output: {
-    path: path.resolve('dist'),
-    filename: 'main.js'
-  }
-};
-
-export default [umdConfig, webConfig];

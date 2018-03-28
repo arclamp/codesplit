@@ -4,8 +4,9 @@
   "description": "Experiments with codesplitting in Webpack",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode development",
-    "prod": "webpack --mode production",
+    "build": "npm run build:lib && npm run build:app",
+    "build:lib": "webpack --mode development",
+    "build:app": "webpack --mode development --config webpack.app.config.babel.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
