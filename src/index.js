@@ -1,4 +1,4 @@
-export const awesomeAdd = (x, y) => x + y;
+import { text } from 'd3-fetch';
 
 export function add (x, y) {
   return x + y;
@@ -15,4 +15,14 @@ function delayed (x) {
 export async function later (x) {
   const val = await delayed(x);
   console.log(val);
+}
+
+export async function getText (filename) {
+  try {
+    const txt = await text(filename);
+    console.log(txt);
+    return txt;
+  } catch (e) {
+    console.warn(e);
+  }
 }
